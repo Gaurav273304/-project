@@ -34,7 +34,7 @@ int main()
     if(rt[count]==0 && flag==1) 
     { 
       remaining--; 
-      printf("P[%d]\t|\t%d\t|\t%d\n",count+1,time-arrival_time[count],time-arrival_time[count]-burst_time[count]); 
+      printf("P[%d]\t|\t%d\t|\t%d\n",count+1,time-arrival_time[count]-burst_time[count],time-arrival_time[count]); 
       waiting_time+=time-arrival_time[count]-burst_time[count]; 
       turn_around_time+=time-arrival_time[count]; 
       flag=0; 
