@@ -10,13 +10,14 @@ int main()
   remaining=n; 
   for(count=0;count<n;count++) 
   { 
-    printf("Enter the  Arrival Time and Burst Time for Process Process Numbers %d :",count+1); 
+    printf("Enter Arrival Time and Burst Time for Process Process Number %d :",count+1); 
     scanf("%d",&arrival_time[count]); 
     scanf("%d",&burst_time[count]); 
     rt[count]=burst_time[count]; 
   } 
-  printf("Enter the Time Quantum:%d\t",time_quantum); 
- printf("\n\nProcess\t|Turnaround Time|Waiting Time\n\n"); 
+  printf("Enter Time Quantum:%d\t",time_quantum); 
+
+  printf("\n\nProcess\t|Turnaround Time|Waiting Time\n\n"); 
   for(time=0,count=0;remaining!=0;) 
   { 
     if(rt[count]<=time_quantum && rt[count]>0) 
@@ -33,7 +34,7 @@ int main()
     if(rt[count]==0 && flag==1) 
     { 
       remaining--; 
-      printf("P[%d]\t|\t%d\t|\t%d\n",count+1,time-arrival_time[count]-burst_time[count],time-arrival_time[count]); 
+      printf("P[%d]\t|\t%d\t|\t%d\n",count+1,time-arrival_time[count],time-arrival_time[count]-burst_time[count]); 
       waiting_time+=time-arrival_time[count]-burst_time[count]; 
       turn_around_time+=time-arrival_time[count]; 
       flag=0; 
